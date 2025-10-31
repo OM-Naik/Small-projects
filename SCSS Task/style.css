@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  gap: 5px;
+  display: flex;
+  background-color: black;
+  padding: 2px;
+}
+
+main section {
+  height: 100%;
+  flex-grow: 1;
+  cursor: pointer;
+  transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+  background-size: cover;
+  background-position: center;
+}
+
+main section:hover {
+  flex-grow: 2;
+}
+
+main section:nth-child(1) {
+  background-image: url(https://imgc.allpostersimages.com/img/posters/the-godfather-1972-directed-by-francis-ford-coppola_u-l-q1eueod0.jpg?artHeight=550&artPerspective=y&artWidth=550&background=ffffff);
+}
+
+main section:nth-child(2) {
+  background-image: url(https://imgc.allpostersimages.com/img/posters/dc-comics-movie-the-dark-knight-batman-logo-on-fire-one-sheet_u-l-f9tm6l0.jpg?artHeight=550&artPerspective=y&artWidth=550&background=ffffff);
+}
+
+main section:nth-child(3) {
+  background-image: url(https://imgc.allpostersimages.com/img/posters/trends-international-marvel-cinematic-universe-avengers-infinity-war-one-sheet_u-l-q1rfv4j0.jpg?artHeight=550&artPerspective=y&artWidth=550&background=ffffff);
+}
+
+main section:nth-child(4) {
+  background-image: url(https://imgc.allpostersimages.com/img/posters/trends-international-the-lord-of-the-rings-the-two-towers-one-sheet_u-l-q1rfym20.jpg?artHeight=550&artPerspective=y&artWidth=550&background=ffffff);
+}
+
+main section:nth-child(5) {
+  background-image: url(https://imgc.allpostersimages.com/img/posters/trends-international-harry-potter-and-the-sorcerer-s-stone-one-sheet_u-l-q1rfxat0.jpg?artHeight=550&artPerspective=y&artWidth=550&background=ffffff);
+}
