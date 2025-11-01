@@ -10,12 +10,35 @@
 
 <body>
     <main>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
+        <section><video src="trial.mp4" muted loop></video></section>
+        <section><video src="trial.mp4" muted loop></video></section>
+        <section><video src="trial.mp4" muted loop></video></section>
+        <section><video src="trial.mp4" muted loop></video></section>
+        <section><video src="trial.mp4" muted loop></video></section>
     </main>
+
+
+
+
+    <script>
+        // JS to auto-play video only on hover
+        const sections = document.querySelectorAll("main section");
+
+        sections.forEach((sec) => {
+            const video = sec.querySelector("video");
+            sec.addEventListener("mouseenter", () => {
+                video.currentTime = 0;
+                video.play();
+                //opacity to 1
+                video.style.opacity = 1;
+            });
+            sec.addEventListener("mouseleave", () => {
+                video.pause();
+                //opacity back to 0
+                video.style.opacity = 0;
+            });
+        });
+    </script>
 </body>
 
 </html>
