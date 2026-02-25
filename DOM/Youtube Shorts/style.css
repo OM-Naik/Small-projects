@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #252525, #8b8b8b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    height: 95vh;
+    width: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.all-reels {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    overscroll-behavior-y: contain;
+    scroll-behavior: smooth;
+}
+
+.all-reels::-webkit-scrollbar {
+    display: none;
+}
+
+.main-reel {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    scroll-snap-align: start;
+}
+
+.main-reel video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.bottom {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+    padding: 20px;
+}
+
+.bottom .user-info {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    bottom: 50px;
+    color: white;
+}
+
+.user-info img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgb(156, 156, 156);
+}
+
+.user-info h4 {
+    font-size: 16px;
+}
+
+.user-info button {
+    padding: 5px 10px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.5s ease;
+}
+
+.user-info button:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+.bottom h2 {
+    color: white;
+    font-size: 18px;
+}
+
+.right {
+    position: absolute;
+    right: 15px;
+    top: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+
+.right i {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.342);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.right i:hover {
+    background-color: rgba(255, 255, 255, 0.342);
+    transition: all 0.3s ease;
+}
+
+
+.right h6 {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    color: white;
+    text-align: center;
+}
+
+.right>div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}

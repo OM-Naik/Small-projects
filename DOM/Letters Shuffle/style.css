@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+}
+
+
+h1 {
+    color: rgb(0, 255, 17);
+    font-size: 50px;
+}
+
+h3 {
+    color: rgb(0, 123, 255);
+    font-size: 20px;
+    margin-top: 50px;
+}
