@@ -8,12 +8,19 @@ const App = () => {
   const [imageURL, setImageURL] = useState('')
   const [userDesc, setUserDesc] = useState('')
 
-  const [allUsers, setAllUsers] = useState([])
+  const localData = JSON.parse(localStorage.getItem('all-users')) || []
+  const [allUsers, setAllUsers] = useState(localData)
 
   const submitHandler = (e) => {
     e.preventDefault()
 
-    setAllUsers([...allUsers, { userName, userRole, userDesc, imageURL }])
+    const oldUsers = [...allUsers]
+
+    oldUsers.push({ userName, userRole, userDesc, imageURL })
+
+    setAllUsers(oldUsers)
+
+    localStorage.setItem('all-users', JSON.stringify(oldUsers))
 
     setUserName('')
     setUserRole('')
@@ -24,9 +31,16 @@ const App = () => {
   const deleteHandler = (idx) => {
     const copyUsers = [...allUsers]
 
-    copyUsers.splice(idx, 1)
+    const conf = confirm('Are you really want to delete this element?')
+
+    if (conf) {
+      copyUsers.splice(idx, 1)
+    } else {
+      alert('element Not Deleted')
+    }
 
     setAllUsers(copyUsers)
+    localStorage.setItem('all-users', JSON.stringify(copyUsers))
   }
 
 
