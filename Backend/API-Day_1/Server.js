@@ -27,6 +27,7 @@ app.use(express.json()) // json data ko parse(convert) krne ke liye middleware u
 
 app.post("/notes", (req, res) => {
     console.log(req.body) // request body ko console me print krna
+    notes.push(req.body) // request body ko notes array me push krna
     res.send("notes created")
 })
 
