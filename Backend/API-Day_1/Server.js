@@ -17,8 +17,10 @@ app.get("/home", (req, res) => {
 
 //post request
 const notes = []
+app.use(express.json()) // json data ko parse(convert) krne ke liye middleware use krna
 
 app.post("/notes", (req, res) => {
+    console.log(req.body) // request body ko console me print krna
     res.send("notes created")
 })
 
