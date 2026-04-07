@@ -1,32 +1,17 @@
-const express = require('express');
-const app = express();
+const express = require("express")
 
-
-app.use(express.json());
-
-// const notes = []
-
-// app.post('/notes', (req, res) => {
-//     console.log(req.body);
-
-//     notes.push(req.body);
-
-//     res.send('Note added successfully');
-
-// })
-
-// app.get('/notes', (req, res) => {
-//     res.send(notes);
-// })
+const app = express() // server instance create krna
 
 app.get('/', (req, res) => {
-    res.send('Welcome to my API');
+    res.send("Hello world")
 })
 
-app.get('/about', (req, res) => {
-    res.send('This is a simple API built with Express.js');
+app.get("/about", function (req, res) {
+    res.send("This is about page")
 })
 
-app.get('/home', (req, res) => {
-    res.send('This is the home page');
+app.get("/home", (req, res) => {
+    res.send("This is Home page")
 })
+
+app.listen(3000) // server start krna
