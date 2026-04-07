@@ -16,6 +16,10 @@ app.get("/home", (req, res) => {
     res.send("This is Home page")
 })
 
+app.get("/notes", (req, res) => {
+    res.send(notes)
+})
+
 //post request --> to send data to server
 //for "Post" we use Postman and create a server
 const notes = []
