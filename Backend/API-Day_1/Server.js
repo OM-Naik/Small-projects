@@ -1,6 +1,4 @@
-const express = require("express")
-
-const app = express() // server instance create krna
+const app = require("./src/App")
 
 //get request --> to get data from server
 //for "Get" we use Render.com and create a server
@@ -36,5 +34,18 @@ app.delete("/notes/:index", (req, res) => {
     delete notes[req.params.index] // delete the note at the specified index
     res.send("note deleted successfully")
 })
+
+//patch request --> to update data in server
+
+/* req.body = {description :- "sample modified description."} */
+
+app.patch("/notes/:index", (req, res) => {
+
+    notes[ req.params.index ].description = req.body.description // update the description of the note at the specified index
+
+    res.send("Note updated successfully")
+
+})
+
 
 app.listen(3000) // server start krna
