@@ -2,6 +2,7 @@ const express = require("express")
 
 const app = express() // server instance create krna
 
+const notes = [] // array create krna
 
 //get request --> to get data from server
 //for "Get" we use Render.com and create a server
@@ -23,7 +24,6 @@ app.get("/notes", (req, res) => {
 
 //post request --> to send data to server
 //for "Post" we use Postman and create a server
-const notes = []
 
 app.use(express.json()) // json data ko parse(convert) krne ke liye middleware use krna
 
