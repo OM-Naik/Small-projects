@@ -2,6 +2,8 @@
 It is to start server and connect it to database.
 */
 
+require("dotenv").config();
+
 const app = require("./src/app") // app.js file ko import krna
 const mongoose = require("mongoose") // mongoose library ko import krna
 const connectToDatabase = require("./src/config/database") // database.js file ko import krna 
