@@ -4,7 +4,7 @@ It is to start server and connect it to database.
 
 const app = require("./src/app") // app.js file ko import krna
 const mongoose = require("mongoose") // mongoose library ko import krna
-const connectToDatabase = require("./config/database") // database.js file ko import krna 
+const connectToDatabase = require("./src/config/database") // database.js file ko import krna 
 
 // Below code is present in [./config/database.js] --> It is use for connect to MongoDB database
 
