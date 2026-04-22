@@ -7,10 +7,12 @@ It is use for server creation and configuration. It is used to create a server a
 
 const express = require("express")
 const noteModel = require("./models/notes.model") // notes.model.js file ko import krna
+const cors = require("cors") // CORS middleware ko import krna
 
 const app = express() // server instance create krna
 
 app.use(express.json()) // json data ko parse krna
+app.use(cors()) // CORS middleware ko use krna
 
 /**
  * -POST /notes --> create a new note
