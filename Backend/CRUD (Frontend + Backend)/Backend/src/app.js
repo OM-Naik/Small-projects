@@ -72,9 +72,9 @@ app.delete("/notes/:id", async (req, res) => {
 app.put("/notes/:id", async (req, res) => {
 
     const id = req.params.id;
-    const {description} = req.body;
+    const { description } = req.body;
 
-    const note = await noteModel.findByIdAndUpdate(id, {description});
+    const note = await noteModel.findByIdAndUpdate(id, { description });
     //This will give us the updated note
 
     res.status(200).json({
@@ -83,5 +83,28 @@ app.put("/notes/:id", async (req, res) => {
     });
 })
 
+/*
+*  -PATCH /notes/:id --> update a note
+*/
+
+app.patch("/notes/:id", async (req, res) => {
+
+    const id = req.params.id;
+    const { description } = req.body;
+    const note = await noteModel.findByIdAndUpdate(id, { description });
+    //This will give us the updated note
+    res.status(200).json({
+        message: "Note updated successfully",
+        note,
+    });
+})
+
+const path = require("path") // path module ko import krna
+app.use((req, res) => {
+    // res.status(404).json({
+    //     message: "Route not found",
+    // });
+    res.sendFile(path.join(__dirname, "..", "public/index.html"));
+})
 
 module.exports = app
