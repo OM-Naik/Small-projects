@@ -7,7 +7,7 @@ function App() {
   const [notes, setNotes] = useState([])
 
   function fetchNotes() {
-    axios.get("http://localhost:3000/notes").then((response) => {
+    axios.get("https://small-projects-bozc.onrender.com").then((response) => {
       setNotes(response.data.notes)
     }).catch((error) => {
       console.log(error)
@@ -24,7 +24,7 @@ function App() {
     const title = e.target.title.value;
     const description = e.target.description.value;
 
-    axios.post("http://localhost:3000/notes", { title, description }).then((response) => {
+    axios.post("https://small-projects-bozc.onrender.com", { title, description }).then((response) => {
       fetchNotes()
     }).catch((error) => {
       console.log(error)
@@ -32,7 +32,7 @@ function App() {
   }
 
   function handleDelete(id) {
-    axios.delete(`http://localhost:3000/notes/${id}`).then((response) => {
+    axios.delete(`https://small-projects-bozc.onrender.com/${id}`).then((response) => {
       fetchNotes()
     }).catch((error) => {
       console.log(error)
@@ -43,7 +43,7 @@ function App() {
     const title = prompt("Enter new title");
     const description = prompt("Enter new description");
     
-    axios.put(`http://localhost:3000/notes/${id}`, { title, description }).then((response) => {
+    axios.put(`https://small-projects-bozc.onrender.com/${id}`, { title, description }).then((response) => {
       fetchNotes()    
     }).catch((error) => {
       console.log(error)
