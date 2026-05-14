@@ -13,6 +13,8 @@ const app = express() // server instance create krna
 
 app.use(express.json()) // json data ko parse krna
 app.use(cors()) // CORS middleware ko use krna
+app.use(express.static("public")) // static files ko serve krna
+
 
 /**
  * -POST /notes --> create a new note
