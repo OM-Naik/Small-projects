@@ -21,6 +21,12 @@ authRouter.post("/register", async (req, res) => {
         expiresIn: "1h",
     });
 
+    res.cookie("jwt_token", token, {
+        httpOnly: true,
+        secure: true,
+        sameSite: "none",
+    });
+
     res.status(201).json({
         message: "User registered successfully",
         user,
